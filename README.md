@@ -1,12 +1,25 @@
-# React + Vite
+# Random Name & Question Picker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fun React-based game that randomly selects a name and a question for the user. The game features a stylish, responsive design with a gradient background, smooth animations, and an engaging user interface.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Randomly selects a name from a list of names.
+- Randomly selects a question from a list of questions.
+- Displays the name and question dynamically when the user clicks the "Pick Random" button.
+- Beautiful, responsive UI with a gradient background.
+- Animation effects for text and buttons.
+- Image on the right side for added visual appeal.
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **React**: JavaScript library for building user interfaces.
+- **Tailwind CSS**: A utility-first CSS framework for styling the application.
+- **JavaScript (ES6)**: For creating the random picker logic.
+
+## How to Run the Project
+
+1. Clone the repository:
+
+   ```bash
+   git clone <repository-url>
