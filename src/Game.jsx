@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import data from "./Data.json"; 
+import data from "./Data.json";
 
 const RandomMatcher = () => {
   const [selectedName, setSelectedName] = useState("");
@@ -15,39 +15,38 @@ const RandomMatcher = () => {
   };
 
   return (
-    <div className="md:flex md:justify-between w-full bg-black">
-      <div className="flex w-[50vw] flex-col md:flex-row items-center justify-center min-h-screen bg-gradient-to-r from-blue-600 via-purple-700 to-pink-500 text-white px-6">
-        {/* Left Side: Text Content */}
-        <div className="flex flex-col items-center md:items-start text-center md:text-left md:w-1/2">
-          <h1 className="text-4xl font-extrabold tracking-wide text-center drop-shadow-lg mb-6">
-            Random Name & Question Picker
-          </h1>
+    <div className="flex flex-col md:flex-row w-full min-h-screen bg-gray-950">
+      {/* Left Side: Content */}
+      <div className="flex flex-col items-center justify-center flex-1 px-6 py-10 bg-gradient-to-br from-teal-600 via-blue-700 to-indigo-800 text-white">
+        <h1 className="text-4xl md:text-5xl font-extrabold tracking-wide text-center drop-shadow-lg mb-6">
+          Random Name & Question Picker
+        </h1>
 
-          <div className="bg-white/20 backdrop-blur-lg p-8 rounded-2xl shadow-xl text-center border border-white/30 w-[350px] transition-transform transform hover:scale-105">
-            <h2 className="text-4xl font-bold text-white mb-4 animate-pulse">
-              {selectedName || "?"}
-            </h2>
-            <p className="mt-4 text-lg font-medium text-gray-200 min-h-[48px]">
-              {selectedQuestion || "Press the button to start!"}
-            </p>
+        <div className="bg-white/10 backdrop-blur-lg p-10 rounded-2xl shadow-xl border border-white/20 w-full max-w-sm text-center transition-transform transform hover:scale-105">
+          <h2 className="text-4xl font-bold text-white mb-4 animate-pulse">
+            {selectedName || "?"}
+          </h2>
+          <p className="mt-4 text-lg font-medium text-gray-200 min-h-[48px]">
+            {selectedQuestion || "Press the button to start!"}
+          </p>
 
-            <button
-              onClick={pickRandom}
-              className="mt-6 bg-white text-blue-600 px-6 py-3 rounded-full font-semibold shadow-lg transition-transform transform hover:scale-110 active:scale-95"
-            >
-              Pick Random
-            </button>
-          </div>
+          <button
+            onClick={pickRandom}
+            className="mt-6 bg-cyan-500 text-gray-900 px-6 py-3 rounded-full font-semibold shadow-lg transition-all duration-300 hover:bg-cyan-600 hover:shadow-xl transform hover:-translate-y-1 active:scale-95"
+          >
+            Pick Random
+          </button>
         </div>
       </div>
 
       {/* Right Side: Image */}
-      <div className="hidden md:block mt-8 h-[100vh] fixed right-0 top-0 w-[50vw] md:mt-0">
+      <div className="hidden md:block w-1/2 relative">
         <img
           src="/know.jpg"
           alt="Game Illustration"
-          className="rounded-r-lg shadow-lg h-[100%] w-full object-cover"
+          className="h-full w-full object-cover rounded-l-lg"
         />
+        <div className="absolute inset-0 bg-black/50 rounded-l-lg"></div>
       </div>
     </div>
   );
